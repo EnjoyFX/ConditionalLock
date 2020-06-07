@@ -36,11 +36,13 @@ Function protection_handler(ws As Worksheet, rng As Range)
 End Function
 
 Private Function tmp_unprotect(ws As Worksheet)
+    ws.Parent.Unprotect
     ws.Unprotect
 End Function
 
 Private Function tmp_protect(ws As Worksheet)
     ws.Protect
+    ws.Parent.Protect
 End Function
 
 
