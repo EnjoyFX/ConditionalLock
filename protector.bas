@@ -41,7 +41,7 @@ Private Function tmp_unprotect(ws As Worksheet)
 End Function
 
 Private Function tmp_protect(ws As Worksheet)
-    ws.Protect
+    ws.Protect DrawingObjects:=True, Contents:=True, Scenarios:=True
     ws.Parent.Protect
 End Function
 
